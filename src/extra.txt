@@ -1,0 +1,15 @@
+{
+    "name": "GemChain",
+    "description": "A modern web application built for the GemChain project, featuring responsive UI and robust functionality.",
+    "tech": [
+      "React",
+      "Tailwind",
+      "Node.js"
+    ],
+    "images": [
+      "/Potfolio/GemChain/e89b4b8a-1.png",
+      "/Potfolio/GemChain/e89b4b8a-2.png",
+      "/Potfolio/GemChain/screencapture-gemchain-app-2026-02-26-13_37_16.png"
+    ],
+    "image": "/Potfolio/GemChain/e89b4b8a-1.png"
+  },
