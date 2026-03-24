@@ -1,5 +1,6 @@
 import Aurora from './components/AuroraBackground';
 import Hero from './components/Hero';
+import Services from './components/Services';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -27,6 +28,7 @@ function App() {
           <div className="logo">AM</div>
           <nav>
             <ul className="nav-links">
+              <li><a href="#services" className="nav-link">Services</a></li>
               <li><a href="#projects" className="nav-link">Projects</a></li>
               <li><a href="#contact" className="nav-link">Contact</a></li>
             </ul>
@@ -46,6 +48,9 @@ function App() {
           <div className="scroll-line" />
         </div>
       </div>
+
+      {/* ─── Services Section ─── */}
+      <Services />
 
       {/* ─── Projects Section ─── */}
       <Projects />
