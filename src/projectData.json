@@ -1,5 +1,34 @@
 [
   {
+    "name": "LinkFlow",
+    "description": "A modern web application built for the LinkFlow project, featuring responsive UI and robust functionality.",
+    "tech": [
+      "React",
+      "Tailwind",
+      "Node.js"
+    ],
+    "images": [
+      "/Potfolio/LinkFlow/1.png",
+      "/Potfolio/LinkFlow/2.png"
+    ],
+    "image": "/Potfolio/LinkFlow/1.png"
+  },
+  {
+    "name": "GGTWRLD",
+    "description": "A modern web application built for the GGTWRLD project, featuring responsive UI and robust functionality.",
+    "tech": [
+      "React",
+      "Tailwind",
+      "Node.js"
+    ],
+    "images": [
+      "/Potfolio/GGTWRLD/1.png",
+      "/Potfolio/GGTWRLD/2.png",
+      "/Potfolio/GGTWRLD/3.png"
+    ],
+    "image": "/Potfolio/GGTWRLD/1.png"
+  },
+  {
     "name": "Mintora Xora",
     "description": "A modern web application built for the Xora project, featuring responsive UI and robust functionality.",
     "tech": [
