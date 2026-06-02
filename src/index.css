@@ -1510,6 +1510,40 @@ body {
   object-fit: contain;
 }
 
+.project-pdf-preview {
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  border: none;
+  pointer-events: none;
+  display: block;
+}
+
+.project-pdf-click-capture {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.vertical-image-wrapper iframe.modal-pdf {
+  width: 100%;
+  min-height: 500px;
+  height: 80vh;
+  max-height: 90vh;
+  display: block;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .vertical-image-wrapper iframe.modal-pdf {
+    min-height: 60vh;
+    height: 70vh;
+  }
+}
+
 /* Responsive Modal */
 @media (max-width: 768px) {
   .modal-overlay {

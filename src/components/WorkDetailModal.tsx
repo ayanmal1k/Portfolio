@@ -1,5 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 
+const isPdf = (src: string) => src.toLowerCase().endsWith('.pdf');
+
 export interface ProjectData {
   name: string;
   description: string;
@@ -50,10 +52,10 @@ export default function WorkDetailModal({ project, onClose }: WorkDetailModalPro
               </div>
             </div>
 
-            {/* Image Viewer */}
+            {/* Image / PDF Viewer */}
             <div className="image-viewer vertical">
               <div className="vertical-container">
-                  {project.images.map((imgSrc, idx) => (
+                  {project.images.map((src, idx) => (
                     <motion.div 
                       key={idx}
                       initial={{ opacity: 0, y: 20 }}
@@ -61,7 +63,15 @@ export default function WorkDetailModal({ project, onClose }: WorkDetailModalPro
                       viewport={{ once: true, margin: '-50px' }}
                       className="vertical-image-wrapper"
                     >
-                      <img src={imgSrc} alt={`${project.name} view ${idx + 1}`} className="modal-image" />
+                      {isPdf(src) ? (
+                        <iframe
+                          src={`${src}#toolbar=0&navpanes=0&scrollbar=0`}
+                          className="modal-pdf"
+                          title={`${project.name} view ${idx + 1}`}
+                        />
+                      ) : (
+                        <img src={src} alt={`${project.name} view ${idx + 1}`} className="modal-image" />
+                      )}
                     </motion.div>
                   ))}
              {project.images.length === 0 && (
@@ -72,7 +82,15 @@ export default function WorkDetailModal({ project, onClose }: WorkDetailModalPro
                      className="vertical-image-wrapper"
                    >
                      {project.image ? (
-                       <img src={project.image} alt={project.name} className="modal-image" />
+                        isPdf(project.image) ? (
+                          <iframe
+                            src={`${project.image}#toolbar=0&navpanes=0&scrollbar=0`}
+                           className="modal-pdf"
+                           title={project.name}
+                         />
+                       ) : (
+                         <img src={project.image} alt={project.name} className="modal-image" />
+                       )
                      ) : (
                        <div className="modal-image-placeholder">
                          <span>No images available yet</span>

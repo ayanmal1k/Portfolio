@@ -37,6 +37,9 @@ const cardReveal = {
   },
 };
 
+/* ─── PDF helper ─── */
+const isPdf = (src: string) => src.toLowerCase().endsWith('.pdf');
+
 /* ─── Project Data ─── */
 const projects: ProjectData[] = projectData as ProjectData[];
 
@@ -76,21 +79,37 @@ export default function Projects() {
             whileHover={{ y: -6, transition: { duration: 0.3 } }}
             onClick={() => setSelectedProject(project)}
           >
-            {/* Image */}
+            {/* Image or PDF preview */}
             <div className="project-image-wrapper">
-              {project.image ? (
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="project-image"
-                  loading="lazy"
-                />
+              {project.image && isPdf(project.image) ? (
+                <>
+                  <object
+                    data={`${project.image}#toolbar=0&navpanes=0&scrollbar=0&zoom=60`}
+                    className="project-image project-pdf-preview"
+                    type="application/pdf"
+                    aria-label={project.name}
+                  />
+                  <div className="project-image-overlay" />
+                  <div className="project-pdf-click-capture" />
+                </>
+              ) : project.image ? (
+                <>
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="project-image"
+                    loading="lazy"
+                  />
+                  <div className="project-image-overlay" />
+                </>
               ) : (
-                <div className="project-image project-image-placeholder">
-                  <span>Image coming soon</span>
-                </div>
+                <>
+                  <div className="project-image project-image-placeholder">
+                    <span>Image coming soon</span>
+                  </div>
+                  <div className="project-image-overlay" />
+                </>
               )}
-              <div className="project-image-overlay" />
             </div>
 
             {/* Info */}
