@@ -84,7 +84,7 @@ export default function Projects() {
               {project.image && isPdf(project.image) ? (
                 <>
                   <object
-                    data={`${project.image}#toolbar=0&navpanes=0&scrollbar=0&zoom=60`}
+                    data={`${project.image}#toolbar=0&navpanes=0&scrollbar=0&zoom=63`}
                     className="project-image project-pdf-preview"
                     type="application/pdf"
                     aria-label={project.name}

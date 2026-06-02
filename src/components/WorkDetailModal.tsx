@@ -65,7 +65,7 @@ export default function WorkDetailModal({ project, onClose }: WorkDetailModalPro
                     >
                       {isPdf(src) ? (
                         <iframe
-                          src={`${src}#toolbar=0&navpanes=0&scrollbar=0`}
+                          src={`${src}#toolbar=0&navpanes=0&scrollbar=0&page=1&view=FitH`}
                           className="modal-pdf"
                           title={`${project.name} view ${idx + 1}`}
                         />
@@ -84,7 +84,7 @@ export default function WorkDetailModal({ project, onClose }: WorkDetailModalPro
                      {project.image ? (
                         isPdf(project.image) ? (
                           <iframe
-                            src={`${project.image}#toolbar=0&navpanes=0&scrollbar=0`}
+                            src={`${project.image}#toolbar=0&navpanes=0&scrollbar=0&page=1&view=FitH`}
                            className="modal-pdf"
                            title={project.name}
                          />
