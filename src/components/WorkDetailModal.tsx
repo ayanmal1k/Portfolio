@@ -64,16 +64,22 @@ export default function WorkDetailModal({ project, onClose }: WorkDetailModalPro
                       <img src={imgSrc} alt={`${project.name} view ${idx + 1}`} className="modal-image" />
                     </motion.div>
                   ))}
-                  {project.images.length === 0 && (
+             {project.images.length === 0 && (
                      <motion.div 
                      initial={{ opacity: 0, y: 20 }}
                      whileInView={{ opacity: 1, y: 0 }}
                      viewport={{ once: true, margin: '-50px' }}
                      className="vertical-image-wrapper"
                    >
-                     <img src={project.image} alt={project.name} className="modal-image" />
+                     {project.image ? (
+                       <img src={project.image} alt={project.name} className="modal-image" />
+                     ) : (
+                       <div className="modal-image-placeholder">
+                         <span>No images available yet</span>
+                       </div>
+                     )}
                    </motion.div>
-                  )}
+                   )}
                 </div>
             </div>
           </motion.div>

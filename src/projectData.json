@@ -1,5 +1,71 @@
 [
   {
+    "name": "Admiral Token",
+    "description": "A modern web application built for the Admiral Token project, featuring responsive UI and robust functionality.",
+    "tech": [
+      "React",
+      "Tailwind",
+      "Node.js"
+    ],
+    "images": [],
+    "image": ""
+  },
+  {
+    "name": "RentX",
+    "description": "A modern web application built for the RentX project, featuring responsive UI and robust functionality.",
+    "tech": [
+      "React",
+      "Tailwind",
+      "Node.js"
+    ],
+    "images": [],
+    "image": ""
+  },
+  {
+    "name": "Gemchain Rebranded",
+    "description": "A modern web application built for the Gemchain Rebranded project, featuring responsive UI and robust functionality.",
+    "tech": [
+      "React",
+      "Tailwind",
+      "Node.js"
+    ],
+    "images": [],
+    "image": ""
+  },
+  {
+    "name": "RentX Buy Page",
+    "description": "A modern web application built for the RentX Buy Page project, featuring responsive UI and robust functionality.",
+    "tech": [
+      "React",
+      "Tailwind",
+      "Node.js"
+    ],
+    "images": [],
+    "image": ""
+  },
+  {
+    "name": "OMUonSOL Presale",
+    "description": "A modern web application built for the OMUonSOL Presale project, featuring responsive UI and robust functionality.",
+    "tech": [
+      "React",
+      "Tailwind",
+      "Node.js"
+    ],
+    "images": [],
+    "image": ""
+  },
+  {
+    "name": "LUXUS Constructions",
+    "description": "A modern web application built for the LUXUS Constructions project, featuring responsive UI and robust functionality.",
+    "tech": [
+      "React",
+      "Tailwind",
+      "Node.js"
+    ],
+    "images": [],
+    "image": ""
+  },
+  {
     "name": "LinkFlow",
     "description": "A modern web application built for the LinkFlow project, featuring responsive UI and robust functionality.",
     "tech": [
@@ -59,7 +125,6 @@
     ],
     "image": "/Potfolio/GemChain/e89b4b8a-1.png"
   },
-  
   {
     "name": "Alaw Monkey",
     "description": "A modern web application built for the Alaw Monkey project, featuring responsive UI and robust functionality.",
@@ -89,6 +154,28 @@
       "/Potfolio/Neko/screencapture-neko-cat-netlify-app-2026-02-26-13_35_34.png"
     ],
     "image": "/Potfolio/Neko/screencapture-neko-cat-netlify-app-2026-02-26-13_35_34.png"
+  },
+  {
+    "name": "InCanTour",
+    "description": "A modern web application built for the InCanTour project, featuring responsive UI and robust functionality.",
+    "tech": [
+      "React",
+      "Tailwind",
+      "Node.js"
+    ],
+    "images": [],
+    "image": ""
+  },
+  {
+    "name": "Buongiorno News",
+    "description": "A modern web application built for the Buongiorno News project, featuring responsive UI and robust functionality.",
+    "tech": [
+      "React",
+      "Tailwind",
+      "Node.js"
+    ],
+    "images": [],
+    "image": ""
   },
   {
     "name": "Dogix",

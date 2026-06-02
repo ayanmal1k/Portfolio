@@ -78,12 +78,18 @@ export default function Projects() {
           >
             {/* Image */}
             <div className="project-image-wrapper">
-              <img
-                src={project.image}
-                alt={project.name}
-                className="project-image"
-                loading="lazy"
-              />
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="project-image"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="project-image project-image-placeholder">
+                  <span>Image coming soon</span>
+                </div>
+              )}
               <div className="project-image-overlay" />
             </div>
 
