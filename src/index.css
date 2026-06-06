@@ -1350,6 +1350,82 @@ body {
   }
 }
 
+/* ─── Tabs ─── */
+.projects-tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.projects-tab {
+  padding: 0.65rem 1.6rem;
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.projects-tab:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.25);
+  color: #ffffff;
+  background: rgba(139, 92, 246, 0.06);
+}
+
+.projects-tab.active {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.3);
+  color: #a78bfa;
+}
+
+/* ─── Games Grid (4 columns) ─── */
+.games-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+  max-width: 1400px !important;
+}
+
+@media (max-width: 1024px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .games-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ─── Game Play Link ─── */
+.game-play-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.25);
+}
+
+.game-play-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.35);
+  border-color: rgba(167, 139, 250, 0.5);
+}
+
 /* ═══════════════════════════════════════════════════
    ─── WORK DETAIL MODAL — Premium Glassmorphism ───
    ═══════════════════════════════════════════════════ */
@@ -1508,6 +1584,10 @@ body {
   height: auto;
   display: block;
   object-fit: contain;
+}
+
+.game-video {
+  max-height: 75vh;
 }
 
 .project-pdf-preview {
