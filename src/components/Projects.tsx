@@ -14,30 +14,6 @@ const fadeUp = (delay: number) => ({
   },
 });
 
-const staggerGrid = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const cardReveal = {
-  hidden: { opacity: 0, y: 30, scale: 0.97 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      type: 'spring' as const,
-      damping: 22,
-      stiffness: 100,
-    },
-  },
-};
-
 /* ─── PDF helper ─── */
 const isPdf = (src: string) => src.toLowerCase().endsWith('.pdf');
 
@@ -121,21 +97,13 @@ export default function Projects() {
         </button>
       </motion.div>
 
-      {/* Websites Grid */}
+      {/* Tab Content */}
       {activeTab === 'websites' && (
-        <motion.div
-          className="projects-grid"
-          variants={staggerGrid}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-50px' }}
-        >
+        <div className="projects-grid fade-in-grid">
           {projects.map((project) => (
-            <motion.div
+            <div
               key={project.name}
               className="project-card"
-              variants={cardReveal}
-              whileHover={{ y: -6, transition: { duration: 0.3 } }}
               onClick={() => setSelectedProject(project)}
             >
               <div className="project-image-wrapper">
@@ -181,26 +149,17 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       )}
 
-      {/* Games Grid */}
       {activeTab === 'games' && (
-        <motion.div
-          className="projects-grid games-grid"
-          variants={staggerGrid}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-50px' }}
-        >
+        <div className="projects-grid games-grid fade-in-grid">
           {games.map((game) => (
-            <motion.div
+            <div
               key={game.name}
               className="project-card"
-              variants={cardReveal}
-              whileHover={{ y: -6, transition: { duration: 0.3 } }}
               onClick={() => setSelectedGame(game)}
             >
               <div className="project-image-wrapper">
@@ -218,9 +177,9 @@ export default function Projects() {
                   <h3 className="project-name">{game.name}</h3>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       )}
 
       {/* Modals */}

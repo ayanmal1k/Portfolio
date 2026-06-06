@@ -1212,6 +1212,7 @@ body {
     0 0 0 1px rgba(139, 92, 246, 0.1),
     inset 0 1px 0 rgba(255,255,255,0.06);
   background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-6px);
 }
 
 /* ─── Image ─── */
@@ -1347,6 +1348,22 @@ body {
   }
   .project-name {
     font-size: 0.95rem;
+  }
+}
+
+/* ─── Tab fade-in animation ─── */
+.fade-in-grid {
+  animation: tabFadeIn 0.35s ease-out;
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
