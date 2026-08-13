@@ -104,14 +104,22 @@ export default function Hero() {
 
       {/* Name heading */}
       <h1 className="hero-name">
-        <SplitText text="AYAN" className="first-name" delay={0.3} />
+        <SplitText text="AYAN MALIK" className="first-line-name" delay={0.3} />
         <motion.span
-          className="last-name"
-          variants={scaleIn(0.7)}
+          className="aka-badge"
+          variants={fadeUp(0.65)}
           initial="hidden"
           animate="visible"
         >
-          MALIK
+          aka
+        </motion.span>
+        <motion.span
+          className="second-line-name"
+          variants={scaleIn(0.85)}
+          initial="hidden"
+          animate="visible"
+        >
+          AMEX
         </motion.span>
       </h1>
 
