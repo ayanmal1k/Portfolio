@@ -1160,13 +1160,12 @@ body {
   background: linear-gradient(90deg, transparent, rgba(139,92,246,0.25), transparent);
 }
 
-/* ─── Grid ─── */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1500px;
 }
 
 /* ─── Card ─── */
@@ -1322,7 +1321,13 @@ body {
 }
 
 /* ─── Projects Responsive ─── */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2368,7 +2373,6 @@ body {
 }
 
 .services-section,
-.projects-section,
 .contact-section {
   contain: content;
 }

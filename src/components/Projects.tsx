@@ -212,7 +212,7 @@ export default function Projects() {
                       )}
                       
                       <div className="project-card-hover-action">
-                        <span>View Proof Details &rarr;</span>
+                        <span>View Full Website &rarr;</span>
                       </div>
                     </div>
 

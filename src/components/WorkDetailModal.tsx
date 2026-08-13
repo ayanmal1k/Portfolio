@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const isPdf = (src: string) => src.toLowerCase().endsWith('.pdf');
@@ -28,6 +29,9 @@ export default function WorkDetailModal({ project, onClose }: WorkDetailModalPro
   useEffect(() => {
     if (!project) return;
 
+    // Lock body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         if (fullscreenImage) {
@@ -43,14 +47,17 @@ export default function WorkDetailModal({ project, onClose }: WorkDetailModalPro
     };
 
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, [project, onClose, fullscreenImage]);
 
   if (!project) return null;
 
   const displayImages = project.images.length > 0 ? project.images : (project.image ? [project.image] : []);
 
-  return (
+  const modalNode = (
     <AnimatePresence>
       {project && (
         <motion.div
@@ -79,7 +86,7 @@ export default function WorkDetailModal({ project, onClose }: WorkDetailModalPro
             {/* Modal Header */}
             <div className="modal-header">
               <div className="modal-header-top">
-                <span className="modal-badge-tag">Proof of Work</span>
+                <span className="modal-badge-tag">Website Showcase</span>
                 {displayImages.length > 0 && (
                   <span className="modal-image-counter">
                     {displayImages.length > 1
@@ -164,4 +171,6 @@ export default function WorkDetailModal({ project, onClose }: WorkDetailModalPro
       )}
     </AnimatePresence>
   );
+
+  return createPortal(modalNode, document.body);
 }

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export interface GameData {
@@ -21,12 +22,18 @@ export default function GamesModal({ game, onClose }: GamesModalProps) {
   useEffect(() => {
     if (!game) return;
 
+    // Lock body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
 
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, [game, onClose]);
 
   const togglePlay = () => {
@@ -42,7 +49,7 @@ export default function GamesModal({ game, onClose }: GamesModalProps) {
 
   if (!game) return null;
 
-  return (
+  const modalNode = (
     <AnimatePresence>
       {game && (
         <motion.div
@@ -126,4 +133,6 @@ export default function GamesModal({ game, onClose }: GamesModalProps) {
       )}
     </AnimatePresence>
   );
+
+  return createPortal(modalNode, document.body);
 }
