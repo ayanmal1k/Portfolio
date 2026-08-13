@@ -56,40 +56,25 @@ type Tab = 'all' | 'websites' | 'games';
 export default function Projects() {
   const [activeTab, setActiveTab] = useState<Tab>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [selectedTech, setSelectedTech] = useState<string>('all');
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
   const [selectedGame, setSelectedGame] = useState<GameData | null>(null);
-
-  // Extract unique tech tags from website projects
-  const availableTechTags = useMemo(() => {
-    const set = new Set<string>();
-    projects.forEach((p) => p.tech?.forEach((t) => set.add(t)));
-    return Array.from(set).slice(0, 8);
-  }, []);
 
   // Filtered websites
   const filteredWebsites = useMemo(() => {
     return projects.filter((project) => {
-      const matchesSearch =
+      return (
         searchQuery === '' ||
-        project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.tech.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
-
-      const matchesTech =
-        selectedTech === 'all' || project.tech.includes(selectedTech);
-
-      return matchesSearch && matchesTech;
+        project.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
     });
-  }, [searchQuery, selectedTech]);
+  }, [searchQuery]);
 
   // Filtered games
   const filteredGames = useMemo(() => {
     return games.filter((game) => {
       return (
         searchQuery === '' ||
-        game.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        game.description.toLowerCase().includes(searchQuery.toLowerCase())
+        game.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
     });
   }, [searchQuery]);
@@ -151,7 +136,7 @@ export default function Projects() {
           </svg>
           <input
             type="text"
-            placeholder="Search projects by name, tech or keyword..."
+            placeholder="Search projects by name..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="projects-search-input"
@@ -166,27 +151,6 @@ export default function Projects() {
             </button>
           )}
         </div>
-
-        {/* Tech Quick Filter Bar (only for websites/all) */}
-        {activeTab !== 'games' && availableTechTags.length > 0 && (
-          <div className="tech-filter-pills">
-            <button
-              className={`tech-filter-pill ${selectedTech === 'all' ? 'active' : ''}`}
-              onClick={() => setSelectedTech('all')}
-            >
-              All Tech
-            </button>
-            {availableTechTags.map((tech) => (
-              <button
-                key={tech}
-                className={`tech-filter-pill ${selectedTech === tech ? 'active' : ''}`}
-                onClick={() => setSelectedTech(tech)}
-              >
-                {tech}
-              </button>
-            ))}
-          </div>
-        )}
       </motion.div>
 
       {/* Grid Content */}
@@ -255,12 +219,6 @@ export default function Projects() {
                     <div className="project-info">
                       <div className="project-text">
                         <h3 className="project-name">{project.name}</h3>
-                        <p className="project-desc">{project.description}</p>
-                      </div>
-                      <div className="project-tech">
-                        {project.tech.map((t) => (
-                          <span key={t} className="tech-tag">{t}</span>
-                        ))}
                       </div>
                     </div>
                   </motion.div>
@@ -269,8 +227,8 @@ export default function Projects() {
             ) : (
               <div className="no-results-box">
                 <p>No website projects found matching "{searchQuery}".</p>
-                <button onClick={() => { setSearchQuery(''); setSelectedTech('all'); }} className="reset-filter-btn">
-                  Reset Filters
+                <button onClick={() => setSearchQuery('')} className="reset-filter-btn">
+                  Reset Search
                 </button>
               </div>
             )}

@@ -5,8 +5,8 @@ const isPdf = (src: string) => src.toLowerCase().endsWith('.pdf');
 
 export interface ProjectData {
   name: string;
-  description: string;
-  tech: string[];
+  description?: string;
+  tech?: string[];
   image: string;
   images: string[];
 }
@@ -89,13 +89,6 @@ export default function WorkDetailModal({ project, onClose }: WorkDetailModalPro
                 )}
               </div>
               <h2 className="modal-title" id="modal-project-title">{project.name}</h2>
-              <p className="modal-desc">{project.description}</p>
-
-              <div className="modal-tech-stack">
-                {project.tech.map((t) => (
-                  <span key={t} className="tech-badge">{t}</span>
-                ))}
-              </div>
             </div>
 
             {/* Image Viewer */}

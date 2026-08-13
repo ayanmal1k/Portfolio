@@ -1,128 +1,131 @@
 [
   {
+    "name": "BROKE",
+    "image": "/Potfolio/nEW/BROKE/$BROKE crypto meme website design.png",
+    "images": [
+      "/Potfolio/nEW/BROKE/$BROKE crypto meme website design.png"
+    ]
+  },
+  {
+    "name": "BULLBUBBY",
+    "image": "/Potfolio/nEW/BULLBUBBY/BullBubby Meme Coin Landing Page.png",
+    "images": [
+      "/Potfolio/nEW/BULLBUBBY/BullBubby Meme Coin Landing Page.png"
+    ]
+  },
+  {
+    "name": "CYBERDOGE",
+    "image": "/Potfolio/nEW/CYBERDOGE/CyberDoge_ Neon Journey to the Moon.png",
+    "images": [
+      "/Potfolio/nEW/CYBERDOGE/CyberDoge_ Neon Journey to the Moon.png"
+    ]
+  },
+  {
+    "name": "HATTY PUP",
+    "image": "/Potfolio/nEW/HATTY PUP/Hatty Pup's colorful helmet collection.png",
+    "images": [
+      "/Potfolio/nEW/HATTY PUP/Hatty Pup's colorful helmet collection.png"
+    ]
+  },
+  {
+    "name": "HENRY HOLDZ",
+    "image": "/Potfolio/nEW/HENRY HOLDZ/Henry Holdz Crypto Chicken Landing Page.png",
+    "images": [
+      "/Potfolio/nEW/HENRY HOLDZ/Henry Holdz Crypto Chicken Landing Page.png"
+    ]
+  },
+  {
+    "name": "OKCAPY",
+    "image": "/Potfolio/nEW/OKCAPY/OKCAPY_ The Chillest Crypto Ride.png",
+    "images": [
+      "/Potfolio/nEW/OKCAPY/OKCAPY_ The Chillest Crypto Ride.png"
+    ]
+  },
+  {
+    "name": "TROLL IN HOOD",
+    "image": "/Potfolio/nEW/TROLL IN HOOD/Troll in Hood Crypto Landing Page.png",
+    "images": [
+      "/Potfolio/nEW/TROLL IN HOOD/Troll in Hood Crypto Landing Page.png"
+    ]
+  },
+  {
+    "name": "WE BALLIN",
+    "image": "/Potfolio/nEW/WE BALLIN/112788.png",
+    "images": [
+      "/Potfolio/nEW/WE BALLIN/112788.png"
+    ]
+  },
+  {
     "name": "LinkFlow",
-    "description": "A modern web application built for the LinkFlow project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/LinkFlow/1.png",
     "images": [
       "/Potfolio/LinkFlow/1.png",
       "/Potfolio/LinkFlow/2.png"
-    ],
-    "image": "/Potfolio/LinkFlow/1.png"
+    ]
   },
   {
     "name": "GGTWRLD",
-    "description": "A modern web application built for the GGTWRLD project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/GGTWRLD/1.png",
     "images": [
       "/Potfolio/GGTWRLD/1.png",
       "/Potfolio/GGTWRLD/2.png",
       "/Potfolio/GGTWRLD/3.png"
-    ],
-    "image": "/Potfolio/GGTWRLD/1.png"
+    ]
   },
   {
     "name": "Mintora Xora",
-    "description": "A modern web application built for the Xora project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/Xora/c8b66ec1-0bd5-449f-acfd-d28cf0b558e2-0.jpg",
     "images": [
       "/Potfolio/Xora/c8b66ec1-0bd5-449f-acfd-d28cf0b558e2-0.jpg",
       "/Potfolio/Xora/c8b66ec1-0bd5-449f-acfd-d28cf0b558e2-1.jpg",
       "/Potfolio/Xora/c8b66ec1-0bd5-449f-acfd-d28cf0b558e2-2.jpg",
       "/Potfolio/Xora/c8b66ec1-0bd5-449f-acfd-d28cf0b558e2-3.jpg"
-    ],
-    "image": "/Potfolio/Xora/c8b66ec1-0bd5-449f-acfd-d28cf0b558e2-0.jpg"
+    ]
   },
   {
     "name": "GemChain",
-    "description": "A modern web application built for the GemChain project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/GemChain/e89b4b8a-1.png",
     "images": [
       "/Potfolio/GemChain/e89b4b8a-1.png",
       "/Potfolio/GemChain/e89b4b8a-2.png",
       "/Potfolio/GemChain/screencapture-gemchain-app-2026-02-26-13_37_16.png"
-    ],
-    "image": "/Potfolio/GemChain/e89b4b8a-1.png"
+    ]
   },
   {
     "name": "Alaw Monkey",
-    "description": "A modern web application built for the Alaw Monkey project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/Alaw Monkey/e7908dca-1.png",
     "images": [
       "/Potfolio/Alaw Monkey/e7908dca-1.png",
       "/Potfolio/Alaw Monkey/e7908dca-2.png",
       "/Potfolio/Alaw Monkey/e7908dca-3.png",
       "/Potfolio/Alaw Monkey/e7908dca-4.png",
       "/Potfolio/Alaw Monkey/screencapture-alawmonkey-2026-02-26-13_37_48.png"
-    ],
-    "image": "/Potfolio/Alaw Monkey/e7908dca-1.png"
+    ]
   },
   {
     "name": "Neko",
-    "description": "A modern web application built for the Neko project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/Neko/screencapture-neko-cat-netlify-app-2026-02-26-13_35_34.png",
     "images": [
       "/Potfolio/Neko/screencapture-neko-cat-netlify-app-2026-02-26-13_35_34.png"
-    ],
-    "image": "/Potfolio/Neko/screencapture-neko-cat-netlify-app-2026-02-26-13_35_34.png"
+    ]
   },
   {
     "name": "InCanTour",
-    "description": "A modern web application built for the InCanTour project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/InCanTour/screencapture-incantourrr-netlify-app-2026-06-02-06_42_41.pdf",
     "images": [
       "/Potfolio/InCanTour/screencapture-incantourrr-netlify-app-2026-06-02-06_42_41.pdf"
-    ],
-    "image": "/Potfolio/InCanTour/screencapture-incantourrr-netlify-app-2026-06-02-06_42_41.pdf"
+    ]
   },
   {
     "name": "Buongiorno News",
-    "description": "A modern web application built for the Buongiorno News project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/Buongiorno News/screencapture-127-0-0-1-5500-2026-06-02-06_44_06.pdf",
     "images": [
       "/Potfolio/Buongiorno News/screencapture-127-0-0-1-5500-2026-06-02-06_44_06.pdf"
-    ],
-    "image": "/Potfolio/Buongiorno News/screencapture-127-0-0-1-5500-2026-06-02-06_44_06.pdf"
+    ]
   },
   {
     "name": "Dogix",
-    "description": "A modern web application built for the Dogix project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/Dogix/da284206-1.png",
     "images": [
       "/Potfolio/Dogix/da284206-1.png",
       "/Potfolio/Dogix/da284206-2.png",
@@ -130,323 +133,190 @@
       "/Potfolio/Dogix/da284206-4.png",
       "/Potfolio/Dogix/da284206-5.png",
       "/Potfolio/Dogix/screencapture-dogix-onrender-2026-02-26-13_42_39.png"
-    ],
-    "image": "/Potfolio/Dogix/da284206-1.png"
+    ]
   },
   {
     "name": "RUBI",
-    "description": "A modern web application built for the RUBI project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/RUBI/a5878996-1.png",
     "images": [
       "/Potfolio/RUBI/a5878996-1.png",
       "/Potfolio/RUBI/a5878996-2.png",
       "/Potfolio/RUBI/a5878996-3.png"
-    ],
-    "image": "/Potfolio/RUBI/a5878996-1.png"
+    ]
   },
   {
     "name": "SecureWallet",
-    "description": "A modern web application built for the SecureWallet project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/SecureWallet/screencapture-127-0-0-1-5500-2026-02-26-14_02_12.png",
     "images": [
       "/Potfolio/SecureWallet/screencapture-127-0-0-1-5500-2026-02-26-14_02_12.png"
-    ],
-    "image": "/Potfolio/SecureWallet/screencapture-127-0-0-1-5500-2026-02-26-14_02_12.png"
+    ]
   },
   {
     "name": "TIQ Token Creator",
-    "description": "A modern web application built for the Xora project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "NextJs",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/TIQ Token Creator/1.png",
     "images": [
       "/Potfolio/TIQ Token Creator/1.png"
-    ],
-    "image": "/Potfolio/TIQ Token Creator/1.png"
+    ]
   },
   {
     "name": "HW26",
-    "description": "A modern web application built for the HW26 project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/HW26/5350f4ef-1.png",
     "images": [
       "/Potfolio/HW26/5350f4ef-1.png",
       "/Potfolio/HW26/5350f4ef-2.png",
       "/Potfolio/HW26/5350f4ef-3.png",
       "/Potfolio/HW26/5350f4ef-4.png",
       "/Potfolio/HW26/screencapture-localhost-3001-2026-02-26-13_53_41.png"
-    ],
-    "image": "/Potfolio/HW26/5350f4ef-1.png"
+    ]
   },
   {
     "name": "Mivarex",
-    "description": "A modern web application built for the Mivarex project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/Mivarex/c2a9d473-1.png",
     "images": [
       "/Potfolio/Mivarex/c2a9d473-1.png",
       "/Potfolio/Mivarex/c2a9d473-2.png",
       "/Potfolio/Mivarex/c2a9d473-3.png",
       "/Potfolio/Mivarex/screencapture-localhost-3001-2026-02-26-13_50_16.png"
-    ],
-    "image": "/Potfolio/Mivarex/c2a9d473-1.png"
+    ]
   },
   {
     "name": "PinaColadaLife",
-    "description": "A modern web application built for the PinaColadaLife project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/PinaColadaLife/screencapture-localhost-3000-2026-02-26-13_59_11.png",
     "images": [
       "/Potfolio/PinaColadaLife/screencapture-localhost-3000-2026-02-26-13_59_11.png"
-    ],
-    "image": "/Potfolio/PinaColadaLife/screencapture-localhost-3000-2026-02-26-13_59_11.png"
+    ]
   },
   {
     "name": "BradOnPump",
-    "description": "A modern web application built for the BradOnPump project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/BradOnPump/d5dc6057-1.png",
     "images": [
       "/Potfolio/BradOnPump/d5dc6057-1.png",
       "/Potfolio/BradOnPump/d5dc6057-2.png",
       "/Potfolio/BradOnPump/screencapture-localhost-3001-2026-02-26-13_57_37.png"
-    ],
-    "image": "/Potfolio/BradOnPump/d5dc6057-1.png"
+    ]
   },
   {
     "name": "The Sign",
-    "description": "A modern web application built for the TheSign project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/TheSign/screencapture-localhost-3001-2026-02-26-14_00_27.png",
     "images": [
       "/Potfolio/TheSign/screencapture-localhost-3001-2026-02-26-14_00_27.png"
-    ],
-    "image": "/Potfolio/TheSign/screencapture-localhost-3001-2026-02-26-14_00_27.png"
+    ]
   },
   {
     "name": "Nackerd",
-    "description": "A modern web application built for the Nackerd project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/Nackerd/screencapture-localhost-3000-2026-02-26-14_12_37.png",
     "images": [
       "/Potfolio/Nackerd/screencapture-localhost-3000-2026-02-26-14_12_37.png"
-    ],
-    "image": "/Potfolio/Nackerd/screencapture-localhost-3000-2026-02-26-14_12_37.png"
+    ]
   },
   {
     "name": "Sustexa",
-    "description": "A modern web application built for the Sustexa project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/Sustexa/screencapture-localhost-3000-2025-07-08-12_38_28_compressed_ljuccj1.jpg",
     "images": [
       "/Potfolio/Sustexa/screencapture-localhost-3000-2025-07-08-12_38_28_compressed_ljuccj1.jpg",
       "/Potfolio/Sustexa/screencapture-localhost-3000-2025-07-08-12_38_28_compressed_ljuccj2.jpg",
       "/Potfolio/Sustexa/screencapture-localhost-3000-2025-07-08-12_38_28_compressed_ljuccj3.jpg",
       "/Potfolio/Sustexa/screencapture-localhost-3000-2025-07-08-12_38_28_compressed_ljuccj4.jpg"
-    ],
-    "image": "/Potfolio/Sustexa/screencapture-localhost-3000-2025-07-08-12_38_28_compressed_ljuccj1.jpg"
+    ]
   },
   {
     "name": "AlwaysExclusive Coin",
-    "description": "A modern web application built for the AlwaysExclusive Coin project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/AlwaysExclusive Coin/fd6ac9c8-1.png",
     "images": [
       "/Potfolio/AlwaysExclusive Coin/fd6ac9c8-1.png",
       "/Potfolio/AlwaysExclusive Coin/fd6ac9c8-2.png",
       "/Potfolio/AlwaysExclusive Coin/screencapture-127-0-0-1-5501-AE-Coin-html-2026-02-26-14_05_42.png"
-    ],
-    "image": "/Potfolio/AlwaysExclusive Coin/fd6ac9c8-1.png"
+    ]
   },
   {
     "name": "TigerTIQ",
-    "description": "A modern web application built for the TigerTIQ project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/TigerTIQ/screencapture-tigertiq-onrender-2026-02-26-13_41_35.png",
     "images": [
       "/Potfolio/TigerTIQ/screencapture-tigertiq-onrender-2026-02-26-13_41_35.png"
-    ],
-    "image": "/Potfolio/TigerTIQ/screencapture-tigertiq-onrender-2026-02-26-13_41_35.png"
+    ]
   },
   {
     "name": "FollowMyLive Presale",
-    "description": "A modern web application built for the Xora project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "NextJs",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/FML/1.png",
     "images": [
       "/Potfolio/FML/1.png"
-    ],
-    "image": "/Potfolio/FML/1.png"
+    ]
   },
   {
     "name": "TierX",
-    "description": "A modern web application built for the TierX project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/TierX/image - 2026-03-04T212004.107.png",
     "images": [
       "/Potfolio/TierX/image - 2026-03-04T212004.107.png",
       "/Potfolio/TierX/image - 2026-03-04T212024.438.png",
       "/Potfolio/TierX/image - 2026-03-04T212039.439.png",
       "/Potfolio/TierX/image - 2026-03-04T212054.389.png",
       "/Potfolio/TierX/TierX (1).jpg"
-    ],
-    "image": "/Potfolio/TierX/image - 2026-03-04T212004.107.png"
+    ]
   },
   {
     "name": "SolScribe",
-    "description": "A modern web application built for the SolScribe project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/SolScribe/screencapture-solsubscribe-2026-02-26-13_40_13.png",
     "images": [
       "/Potfolio/SolScribe/screencapture-solsubscribe-2026-02-26-13_40_13.png"
-    ],
-    "image": "/Potfolio/SolScribe/screencapture-solsubscribe-2026-02-26-13_40_13.png"
+    ]
   },
   {
     "name": "EarthRuler Presale",
-    "description": "A modern web application built for the EarthRuler Presale project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/EarthRuler Presale/screencapture-localhost-3002-2026-02-26-13_57_54.png",
     "images": [
       "/Potfolio/EarthRuler Presale/screencapture-localhost-3002-2026-02-26-13_57_54.png"
-    ],
-    "image": "/Potfolio/EarthRuler Presale/screencapture-localhost-3002-2026-02-26-13_57_54.png"
+    ]
   },
   {
     "name": "HungryVulture",
-    "description": "A modern web application built for the HungryVulture project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/HungryVulture/screencapture-127-0-0-1-5501-hungryvulture-html-2026-02-26-14_03_47.png",
     "images": [
       "/Potfolio/HungryVulture/screencapture-127-0-0-1-5501-hungryvulture-html-2026-02-26-14_03_47.png"
-    ],
-    "image": "/Potfolio/HungryVulture/screencapture-127-0-0-1-5501-hungryvulture-html-2026-02-26-14_03_47.png"
+    ]
   },
   {
     "name": "AGAMA",
-    "description": "A modern web application built for the AGAMA project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/AGAMA/78864169-1.png",
     "images": [
       "/Potfolio/AGAMA/78864169-1.png",
       "/Potfolio/AGAMA/78864169-2.png",
       "/Potfolio/AGAMA/78864169-3.png",
       "/Potfolio/AGAMA/screencapture-localhost-3000-2026-02-26-13_57_16.png"
-    ],
-    "image": "/Potfolio/AGAMA/78864169-1.png"
+    ]
   },
   {
     "name": "BTCMicro",
-    "description": "A modern web application built for the BTCMicro project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/BTCMicro/screencapture-localhost-3000-2026-02-26-13_54_39.png",
     "images": [
       "/Potfolio/BTCMicro/screencapture-localhost-3000-2026-02-26-13_54_39.png"
-    ],
-    "image": "/Potfolio/BTCMicro/screencapture-localhost-3000-2026-02-26-13_54_39.png"
+    ]
   },
   {
     "name": "FrogKing",
-    "description": "A modern web application built for the FrogKing project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/FrogKing/c4d8e3c5-1.png",
     "images": [
       "/Potfolio/FrogKing/c4d8e3c5-1.png",
       "/Potfolio/FrogKing/c4d8e3c5-2.png",
       "/Potfolio/FrogKing/screencapture-127-0-0-1-5501-2026-02-26-14_06_52.png"
-    ],
-    "image": "/Potfolio/FrogKing/c4d8e3c5-1.png"
+    ]
   },
   {
     "name": "Always Exclusive",
-    "description": "A modern web application built for the Always Exclusive project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/Always Exclusive/b53148ba-1.png",
     "images": [
       "/Potfolio/Always Exclusive/b53148ba-1.png",
       "/Potfolio/Always Exclusive/b53148ba-2.png",
       "/Potfolio/Always Exclusive/screencapture-127-0-0-1-5501-2026-02-26-14_05_19.png"
-    ],
-    "image": "/Potfolio/Always Exclusive/b53148ba-1.png"
+    ]
   },
   {
     "name": "WTFDC",
-    "description": "A modern web application built for the WTFDC project, featuring responsive UI and robust functionality.",
-    "tech": [
-      "React",
-      "Tailwind",
-      "Node.js"
-    ],
+    "image": "/Potfolio/WTFDC/d7f351ed-6224-49d7-a42d-d52e6881b047-0.jpg",
     "images": [
       "/Potfolio/WTFDC/d7f351ed-6224-49d7-a42d-d52e6881b047-0.jpg",
       "/Potfolio/WTFDC/d7f351ed-6224-49d7-a42d-d52e6881b047-1.jpg",
       "/Potfolio/WTFDC/d7f351ed-6224-49d7-a42d-d52e6881b047-2.jpg",
       "/Potfolio/WTFDC/d7f351ed-6224-49d7-a42d-d52e6881b047-3.jpg"
-    ],
-    "image": "/Potfolio/WTFDC/d7f351ed-6224-49d7-a42d-d52e6881b047-0.jpg"
+    ]
   }
 ]
