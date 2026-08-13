@@ -24,22 +24,22 @@ const staggerCards = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
+      staggerChildren: 0.08,
+      delayChildren: 0.15,
     },
   },
 };
 
 const cardReveal = {
-  hidden: { opacity: 0, y: 35, scale: 0.97 },
+  hidden: { opacity: 0, y: 30, scale: 0.97 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
     transition: {
       type: 'spring' as const,
-      damping: 22,
-      stiffness: 95,
+      damping: 24,
+      stiffness: 110,
     },
   },
 };
@@ -47,7 +47,7 @@ const cardReveal = {
 type Service = {
   title: string;
   description: string;
-  features: string[];
+  tags: string[];
   accent: string;
   glow: string;
   icon: LucideIcon;
@@ -56,50 +56,50 @@ type Service = {
 const services: Service[] = [
   {
     title: 'Landing Page Development',
-    description: 'High-converting, modern landing pages designed for products, startups, and campaigns.',
-    features: ['Responsive design', 'Fast loading', 'Conversion-focused layout'],
+    description: 'High-converting, ultra-fast landing pages built for modern products, startups, and campaigns.',
+    tags: ['Responsive UI', 'High Conversion', 'Fast Load'],
     accent: '#8b5cf6',
-    glow: 'rgba(139, 92, 246, 0.24)',
+    glow: 'rgba(139, 92, 246, 0.25)',
     icon: Globe,
   },
   {
-    title: 'Presale and ICO Token Websites',
-    description: 'Trust-focused token launch sites with clear tokenomics, roadmap, and wallet-ready UX.',
-    features: ['Tokenomics and roadmap sections', 'Wallet flow ready UI', 'Whitelist and CTA funnels'],
+    title: 'Presale & ICO Launchpads',
+    description: 'Trust-focused token launch portals with tokenomics, roadmap, and wallet-ready Web3 integration.',
+    tags: ['Tokenomics UI', 'Wallet Connect', 'Whitelist Funnels'],
     accent: '#c084fc',
-    glow: 'rgba(192, 132, 252, 0.24)',
+    glow: 'rgba(192, 132, 252, 0.25)',
     icon: Coins,
   },
   {
-    title: 'Web3 Game Websites and Features',
-    description: 'Interactive Web3 gaming portals with engaging UI, progression logic, and community hooks.',
-    features: ['Game portal interfaces', 'Quest and reward sections', 'Community integration'],
+    title: 'Web3 Game Portals',
+    description: 'Interactive gaming portals and WebGL experiences with progression mechanics and community hooks.',
+    tags: ['Game UI', 'WebGL Canvas', 'Quests & Rewards'],
     accent: '#a78bfa',
-    glow: 'rgba(167, 139, 250, 0.24)',
+    glow: 'rgba(167, 139, 250, 0.25)',
     icon: Gamepad2,
   },
   {
     title: 'Telegram Bot Development',
-    description: 'Custom bots for support, alerts, onboarding, and automation in Web2 and Web3 projects.',
-    features: ['Command and menu bots', 'Auto-replies and moderation', 'API integration support'],
+    description: 'Custom bots for support, real-time alerts, user onboarding, and automation for Web2/Web3.',
+    tags: ['Menu & Command Bots', 'Auto Moderation', 'API Workflows'],
     accent: '#e879f9',
-    glow: 'rgba(232, 121, 249, 0.2)',
+    glow: 'rgba(232, 121, 249, 0.22)',
     icon: Bot,
   },
   {
-    title: 'Data Scraping and Automation',
-    description: 'Reliable scraping workflows and data pipelines for market research, analytics, and reporting.',
-    features: ['Custom extractors', 'Scheduled automation', 'Clean export formats'],
+    title: 'Data Scraping & Pipelines',
+    description: 'Automated extractors and robust data pipelines for market analytics, reporting, and research.',
+    tags: ['Custom Crawlers', 'Scheduled Jobs', 'Clean Datasets'],
     accent: '#7c3aed',
-    glow: 'rgba(124, 58, 237, 0.24)',
+    glow: 'rgba(124, 58, 237, 0.25)',
     icon: ChartSpline,
   },
   {
-    title: 'Full Stack Product Features',
-    description: 'End-to-end feature development for dashboards, APIs, authentication, and admin tooling.',
-    features: ['Frontend + backend delivery', 'Secure auth patterns', 'Scalable architecture'],
+    title: 'Full Stack Web Products',
+    description: 'End-to-end web applications, dashboards, REST/GraphQL APIs, and admin control panels.',
+    tags: ['React & Node.js', 'Auth & Database', 'Scalable Arch'],
     accent: '#f472b6',
-    glow: 'rgba(244, 114, 182, 0.2)',
+    glow: 'rgba(244, 114, 182, 0.22)',
     icon: Layers,
   },
 ];
@@ -107,33 +107,36 @@ const services: Service[] = [
 export default function Services() {
   return (
     <section className="services-section" id="services">
+      {/* Background Ambient Orbs */}
       <motion.div
         className="services-orb services-orb-one"
-        animate={{ y: [-12, 14, -12], x: [0, 16, 0], scale: [1, 1.08, 1] }}
-        transition={{ duration: 13, repeat: Infinity, ease: 'easeInOut' }}
+        animate={{ y: [-10, 12, -10], x: [0, 14, 0], scale: [1, 1.06, 1] }}
+        transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.div
         className="services-orb services-orb-two"
-        animate={{ y: [10, -14, 10], x: [0, -12, 0], scale: [1.05, 0.95, 1.05] }}
-        transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut' }}
+        animate={{ y: [10, -12, 10], x: [0, -10, 0], scale: [1.04, 0.96, 1.04] }}
+        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
       />
 
+      {/* Minimal Header */}
       <motion.div
-        className="contact-header"
+        className="contact-header services-header-minimal"
         variants={fadeUp(0)}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-100px' }}
       >
-        <span className="section-tag">Services</span>
+        <span className="section-tag minimal-tag">Capabilities</span>
         <h2 className="section-title">What I Build</h2>
         <p className="section-subtitle">
-          From token launch websites to automation and bots, I build digital products that are fast, scalable, and ready for real users.
+          Engineering high-conversion Web3 DApps, token launchpads, Telegram automation &amp; full stack web applications.
         </p>
       </motion.div>
 
+      {/* Minimal Bento Grid */}
       <motion.div
-        className="services-grid"
+        className="services-grid minimal-services-grid"
         variants={staggerCards}
         initial="hidden"
         whileInView="visible"
@@ -145,7 +148,7 @@ export default function Services() {
           return (
             <motion.article
               key={service.title}
-              className="service-card"
+              className="service-card minimal-service-card"
               variants={cardReveal}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
               style={{
@@ -153,35 +156,52 @@ export default function Services() {
                 '--service-glow': service.glow,
               } as CSSProperties}
             >
+              {/* Header row: Index & Icon */}
               <div className="service-card-top">
-                <div className="service-index">{String(index + 1).padStart(2, '0')}</div>
+                <span className="service-minimal-num">{String(index + 1).padStart(2, '0')}</span>
                 <div className="service-icon-wrap">
                   <Icon size={18} />
                 </div>
               </div>
-              <h3 className="service-title">{service.title}</h3>
-              <p className="service-description">{service.description}</p>
-              <ul className="service-features">
-                {service.features.map((item) => (
-                  <li key={item}>{item}</li>
+
+              {/* Title & Desc */}
+              <div className="service-card-body">
+                <h3 className="service-title">{service.title}</h3>
+                <p className="service-description">{service.description}</p>
+              </div>
+
+              {/* Tag Pills */}
+              <div className="service-minimal-tags">
+                {service.tags.map((tag) => (
+                  <span key={tag} className="service-minimal-tag">
+                    <span className="tag-dot" />
+                    {tag}
+                  </span>
                 ))}
-              </ul>
+              </div>
+
+              {/* Subtle hover glow ring */}
               <div className="service-card-shine" />
             </motion.article>
           );
         })}
       </motion.div>
 
+      {/* CTA Button */}
       <motion.a
         href="#contact"
-        className="services-cta"
+        className="services-cta minimal-services-cta"
         variants={fadeUp(0.2)}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         whileHover={{ y: -4 }}
       >
-        Start Your Project
+        <span>Start Your Project</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="7" y1="17" x2="17" y2="7" />
+          <polyline points="7 7 17 7 17 17" />
+        </svg>
       </motion.a>
     </section>
   );
