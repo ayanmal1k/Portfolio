@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import projectData from '../projectData.json';
 import WorkDetailModal, { type ProjectData } from './WorkDetailModal';
@@ -51,12 +51,48 @@ const games: GameData[] = [
   },
 ];
 
-type Tab = 'websites' | 'games';
+type Tab = 'all' | 'websites' | 'games';
 
 export default function Projects() {
-  const [activeTab, setActiveTab] = useState<Tab>('websites');
+  const [activeTab, setActiveTab] = useState<Tab>('all');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [selectedTech, setSelectedTech] = useState<string>('all');
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
   const [selectedGame, setSelectedGame] = useState<GameData | null>(null);
+
+  // Extract unique tech tags from website projects
+  const availableTechTags = useMemo(() => {
+    const set = new Set<string>();
+    projects.forEach((p) => p.tech?.forEach((t) => set.add(t)));
+    return Array.from(set).slice(0, 8);
+  }, []);
+
+  // Filtered websites
+  const filteredWebsites = useMemo(() => {
+    return projects.filter((project) => {
+      const matchesSearch =
+        searchQuery === '' ||
+        project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        project.tech.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
+
+      const matchesTech =
+        selectedTech === 'all' || project.tech.includes(selectedTech);
+
+      return matchesSearch && matchesTech;
+    });
+  }, [searchQuery, selectedTech]);
+
+  // Filtered games
+  const filteredGames = useMemo(() => {
+    return games.filter((game) => {
+      return (
+        searchQuery === '' ||
+        game.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        game.description.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    });
+  }, [searchQuery]);
 
   return (
     <section className="projects-section" id="projects">
@@ -68,119 +104,236 @@ export default function Projects() {
         whileInView="visible"
         viewport={{ once: true, margin: '-100px' }}
       >
-        <span className="section-tag">Projects</span>
-        <h2 className="section-title">Selected Work</h2>
+        <span className="section-tag">Proof of Work</span>
+        <h2 className="section-title">Selected Projects &amp; Deliverables</h2>
         <p className="section-subtitle">
-          A curated collection of projects showcasing full-stack development, Web3 integrations, and modern UI design.
+          Explore real-world client builds, Web3 DApps, Telegram bots, token presales, and WebGL web games.
         </p>
       </motion.div>
 
-      {/* Tabs */}
+      {/* Tabs Bar with Counts */}
       <motion.div
-        className="projects-tabs"
+        className="projects-tabs-wrapper"
         variants={fadeUp(0.1)}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-50px' }}
       >
-        <button
-          className={`projects-tab ${activeTab === 'websites' ? 'active' : ''}`}
-          onClick={() => setActiveTab('websites')}
-        >
-          Websites
-        </button>
-        <button
-          className={`projects-tab ${activeTab === 'games' ? 'active' : ''}`}
-          onClick={() => setActiveTab('games')}
-        >
-          Web Games
-        </button>
+        <div className="projects-tabs">
+          <button
+            className={`projects-tab ${activeTab === 'all' ? 'active' : ''}`}
+            onClick={() => setActiveTab('all')}
+          >
+            <span>All Proof of Work</span>
+            <span className="tab-count-badge">{projects.length + games.length}</span>
+          </button>
+          <button
+            className={`projects-tab ${activeTab === 'websites' ? 'active' : ''}`}
+            onClick={() => setActiveTab('websites')}
+          >
+            <span>Websites &amp; DApps</span>
+            <span className="tab-count-badge">{projects.length}</span>
+          </button>
+          <button
+            className={`projects-tab ${activeTab === 'games' ? 'active' : ''}`}
+            onClick={() => setActiveTab('games')}
+          >
+            <span>Web Games</span>
+            <span className="tab-count-badge">{games.length}</span>
+          </button>
+        </div>
+
+        {/* Search Bar */}
+        <div className="projects-search-bar">
+          <svg className="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            type="text"
+            placeholder="Search projects by name, tech or keyword..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="projects-search-input"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="search-clear-btn"
+              aria-label="Clear search"
+            >
+              &times;
+            </button>
+          )}
+        </div>
+
+        {/* Tech Quick Filter Bar (only for websites/all) */}
+        {activeTab !== 'games' && availableTechTags.length > 0 && (
+          <div className="tech-filter-pills">
+            <button
+              className={`tech-filter-pill ${selectedTech === 'all' ? 'active' : ''}`}
+              onClick={() => setSelectedTech('all')}
+            >
+              All Tech
+            </button>
+            {availableTechTags.map((tech) => (
+              <button
+                key={tech}
+                className={`tech-filter-pill ${selectedTech === tech ? 'active' : ''}`}
+                onClick={() => setSelectedTech(tech)}
+              >
+                {tech}
+              </button>
+            ))}
+          </div>
+        )}
       </motion.div>
 
-      {/* Tab Content */}
-      {activeTab === 'websites' && (
-        <div className="projects-grid fade-in-grid">
-          {projects.map((project) => (
-            <div
-              key={project.name}
-              className="project-card"
-              onClick={() => setSelectedProject(project)}
-            >
-              <div className="project-image-wrapper">
-                {project.image && isPdf(project.image) ? (
-                  <>
-                    <object
-                      data={`${project.image}#toolbar=0&navpanes=0&scrollbar=0&zoom=63`}
-                      className="project-image project-pdf-preview"
-                      type="application/pdf"
-                      aria-label={project.name}
-                    />
-                    <div className="project-image-overlay" />
-                    <div className="project-pdf-click-capture" />
-                  </>
-                ) : project.image ? (
-                  <>
-                    <img
-                      src={project.image}
-                      alt={project.name}
-                      className="project-image"
-                      loading="lazy"
-                    />
-                    <div className="project-image-overlay" />
-                  </>
-                ) : (
-                  <>
-                    <div className="project-image project-image-placeholder">
-                      <span>Image coming soon</span>
+      {/* Grid Content */}
+      <div className="projects-content-wrap">
+        {/* Websites Grid */}
+        {(activeTab === 'all' || activeTab === 'websites') && (
+          <div className="projects-category-group">
+            {activeTab === 'all' && (
+              <h3 className="category-group-heading">Websites &amp; Applications ({filteredWebsites.length})</h3>
+            )}
+
+            {filteredWebsites.length > 0 ? (
+              <div className="projects-grid fade-in-grid">
+                {filteredWebsites.map((project, idx) => (
+                  <motion.div
+                    key={project.name}
+                    className="project-card proof-card"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: (idx % 6) * 0.05 }}
+                    whileHover={{ y: -8 }}
+                    onClick={() => setSelectedProject(project)}
+                  >
+                    {/* Card Badge */}
+                    <div className="card-top-badge">
+                      {project.image && isPdf(project.image) ? (
+                        <span className="card-badge pdf-badge">📄 PDF Deck Presentation</span>
+                      ) : (
+                        <span className="card-badge app-badge">⚡ Full App / DApp</span>
+                      )}
                     </div>
-                    <div className="project-image-overlay" />
-                  </>
-                )}
-              </div>
 
-              <div className="project-info">
-                <div className="project-text">
-                  <h3 className="project-name">{project.name}</h3>
-                  <p className="project-desc">{project.description}</p>
-                </div>
-                <div className="project-tech">
-                  {project.tech.map((t) => (
-                    <span key={t} className="tech-tag">{t}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
+                    <div className="project-image-wrapper">
+                      {project.image && isPdf(project.image) ? (
+                        <div className="pdf-card-thumbnail">
+                          <div className="pdf-thumbnail-icon">📄</div>
+                          <span className="pdf-thumbnail-title">{project.name} Deck</span>
+                          <span className="pdf-thumbnail-hint">Click to Open Interactive PDF</span>
+                          <div className="project-image-overlay" />
+                        </div>
+                      ) : project.image ? (
+                        <>
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="project-image"
+                            loading="lazy"
+                          />
+                          <div className="project-image-overlay" />
+                        </>
+                      ) : (
+                        <>
+                          <div className="project-image project-image-placeholder">
+                            <span>Preview Coming Soon</span>
+                          </div>
+                          <div className="project-image-overlay" />
+                        </>
+                      )}
+                      
+                      <div className="project-card-hover-action">
+                        <span>View Proof Details &rarr;</span>
+                      </div>
+                    </div>
 
-      {activeTab === 'games' && (
-        <div className="projects-grid games-grid fade-in-grid">
-          {games.map((game) => (
-            <div
-              key={game.name}
-              className="project-card"
-              onClick={() => setSelectedGame(game)}
-            >
-              <div className="project-image-wrapper">
-                <img
-                  src={game.thumbnail}
-                  alt={game.name}
-                  className="project-image"
-                  loading="lazy"
-                />
-                <div className="project-image-overlay" />
+                    <div className="project-info">
+                      <div className="project-text">
+                        <h3 className="project-name">{project.name}</h3>
+                        <p className="project-desc">{project.description}</p>
+                      </div>
+                      <div className="project-tech">
+                        {project.tech.map((t) => (
+                          <span key={t} className="tech-tag">{t}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
+            ) : (
+              <div className="no-results-box">
+                <p>No website projects found matching "{searchQuery}".</p>
+                <button onClick={() => { setSearchQuery(''); setSelectedTech('all'); }} className="reset-filter-btn">
+                  Reset Filters
+                </button>
+              </div>
+            )}
+          </div>
+        )}
 
-              <div className="project-info">
-                <div className="project-text">
-                  <h3 className="project-name">{game.name}</h3>
-                </div>
+        {/* Web Games Grid */}
+        {(activeTab === 'all' || activeTab === 'games') && (
+          <div className="projects-category-group" style={{ marginTop: activeTab === 'all' ? '4rem' : '0' }}>
+            {activeTab === 'all' && (
+              <h3 className="category-group-heading">Web3 Web Games ({filteredGames.length})</h3>
+            )}
+
+            {filteredGames.length > 0 ? (
+              <div className="projects-grid games-grid fade-in-grid">
+                {filteredGames.map((game, idx) => (
+                  <motion.div
+                    key={game.name}
+                    className="project-card game-proof-card"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: (idx % 4) * 0.08 }}
+                    whileHover={{ y: -8 }}
+                    onClick={() => setSelectedGame(game)}
+                  >
+                    <div className="card-top-badge">
+                      <span className="card-badge game-badge">🎮 Playable Web Game</span>
+                    </div>
+
+                    <div className="project-image-wrapper">
+                      <img
+                        src={game.thumbnail}
+                        alt={game.name}
+                        className="project-image"
+                        loading="lazy"
+                      />
+                      <div className="project-image-overlay" />
+                      <div className="project-card-hover-action">
+                        <span>Watch Gameplay &rarr;</span>
+                      </div>
+                    </div>
+
+                    <div className="project-info">
+                      <div className="project-text">
+                        <h3 className="project-name">{game.name}</h3>
+                        <p className="project-desc">{game.description}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-            </div>
-          ))}
-        </div>
-      )}
+            ) : (
+              <div className="no-results-box">
+                <p>No web games found matching "{searchQuery}".</p>
+                <button onClick={() => setSearchQuery('')} className="reset-filter-btn">
+                  Reset Search
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
 
       {/* Modals */}
       <WorkDetailModal 

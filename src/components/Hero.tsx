@@ -99,7 +99,7 @@ export default function Hero() {
         animate="visible"
       >
         <span className="hero-badge-dot" />
-        <span>Portfolio</span>
+        <span>Web3 &amp; Full Stack Developer</span>
       </motion.div>
 
       {/* Name heading */}
@@ -122,20 +122,43 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
       >
-        <span className="role-highlight">Full Stack & Web3 Blockchain Developer</span>
+        <span className="role-highlight">Full Stack &amp; Web3 Engineer</span>
         <span className="role-separator">—</span>
-        <span>crafting aesthetic &amp; functional digital experiences.</span>
+        <span>crafting high-conversion ICO launchpads, Telegram bots &amp; Web3 applications.</span>
       </motion.p>
+
+      {/* Key Highlights / Badges */}
+      <motion.div
+        className="hero-stats-row"
+        variants={fadeUp(1.3)}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="hero-stat-pill">
+          <span className="stat-value">Web3 / ICO</span>
+          <span className="stat-label">Launchpads</span>
+        </div>
+        <div className="hero-stat-divider" />
+        <div className="hero-stat-pill">
+          <span className="stat-value">Telegram</span>
+          <span className="stat-label">Automation &amp; Bots</span>
+        </div>
+        <div className="hero-stat-divider" />
+        <div className="hero-stat-pill">
+          <span className="stat-value">Interactive</span>
+          <span className="stat-label">Web Games</span>
+        </div>
+      </motion.div>
 
       {/* CTA */}
       <motion.div
         className="hero-cta"
-        variants={fadeUp(1.4)}
+        variants={fadeUp(1.5)}
         initial="hidden"
         animate="visible"
       >
         <a href="#projects" className="cta-primary">
-          <span>View My Work</span>
+          <span>Explore Projects</span>
           <span className="btn-icon">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="7" y1="17" x2="17" y2="7" />
@@ -144,7 +167,7 @@ export default function Hero() {
           </span>
         </a>
         <a href="#contact" className="cta-secondary">
-          <span>Get In Touch</span>
+          <span>Let's Talk</span>
         </a>
       </motion.div>
 
